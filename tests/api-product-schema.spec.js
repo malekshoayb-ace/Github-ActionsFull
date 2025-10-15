@@ -18,7 +18,7 @@ test('GET product API - with JSON Schema validation', async ({ request }) => {
     }
   };
   
-  const response = await request.get(apiUrl);
+  const response = await request.get(apiUrl, { timeout: 30000 });
   expect(response.status()).toBe(200);
   
   const responseBody = await response.json();

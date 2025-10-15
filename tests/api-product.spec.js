@@ -6,7 +6,7 @@ test('GET product API - validate response and schema', async ({ request }) => {
   const apiUrl = 'https://fakestoreapi.com/products/1';
   
   // Step 2: Send GET request
-  const response = await request.get(apiUrl);
+  const response = await request.get(apiUrl, { timeout: 30000 });
   
   // Step 3: Verify response status is 200
   expect(response.status()).toBe(200);
