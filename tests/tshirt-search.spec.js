@@ -11,4 +11,4 @@ test('Search for T-shirts and verify Faded Short Sleeve T-shirts', async ({ page
   
   // Verify "Faded Short Sleeve T-shirts" is in the search results
   await expect(page.locator('#center_column').getByText('Faded Short Sleeve T-shirts')).toBeVisible();
-});
+}); 
